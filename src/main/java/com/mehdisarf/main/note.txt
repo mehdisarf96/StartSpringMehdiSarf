@@ -3,3 +3,6 @@ Add a bean into the context:
 (Define a config class and create a method that returns the bean
 and annotate the method with @Bean
 and make Spring use my config class.)
+
+--
+Referring to the Parrot instance from the context
