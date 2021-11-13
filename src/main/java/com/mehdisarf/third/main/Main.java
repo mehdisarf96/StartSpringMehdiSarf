@@ -11,7 +11,8 @@ public class Main {
         Parrot p = context.getBean(Parrot.class);
 
         System.out.println(p);
-        //Prints null because we did not assign any name to the parrot instance added by Spring in its context
+
+        // will not prints null anymore.
         System.out.println(p.getName());
     }
 }
