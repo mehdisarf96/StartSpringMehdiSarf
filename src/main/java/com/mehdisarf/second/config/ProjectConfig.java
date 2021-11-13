@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ProjectConfig {
 
-    @Bean
+    @Bean(name = "firstParrot")
     Parrot parrot1(){
 
         Parrot p = new Parrot();
@@ -16,7 +16,7 @@ public class ProjectConfig {
         return p;
     }
 
-    @Bean
+    @Bean(name = "secondParrot")
     Parrot parrot2(){
 
         Parrot p = new Parrot();
@@ -25,7 +25,7 @@ public class ProjectConfig {
         return p;
     }
 
-    @Bean
+    @Bean(name = "thirdParrot")
     Parrot parrot3(){
 
         Parrot p = new Parrot();

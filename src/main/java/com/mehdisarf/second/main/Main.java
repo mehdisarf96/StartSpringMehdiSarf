@@ -8,10 +8,10 @@ public class Main {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        // You’ll get an exception on this line because Spring cannot guess which of the three Parrot instances you refer to.
-        // Parrot p = context.getBean(Parrot.class);
+        // will throw an exception:
+        // Parrot p = context.getBean("parrot3", Parrot.class);
 
-        Parrot p = context.getBean("parrot3", Parrot.class);
+        Parrot p = context.getBean("thirdParrot", Parrot.class);
 
         System.out.println(p.getName());
     }
