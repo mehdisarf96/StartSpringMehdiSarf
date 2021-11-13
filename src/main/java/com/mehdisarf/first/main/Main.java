@@ -1,6 +1,6 @@
-package com.mehdisarf.main;
+package com.mehdisarf.first.main;
 
-import com.mehdisarf.config.ProjectConfig;
+import com.mehdisarf.first.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {

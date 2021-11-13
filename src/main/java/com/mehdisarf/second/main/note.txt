@@ -1,0 +1,8 @@
+add more than one object of the same type to the Spring Context
+and individually refer to these objects.
+
+You can add more beans of the same type to the Spring context
+by using multiple methods annotated with @Bean.
+
+Each instance will have a unique identifier.
+To refer to them afterward, you’ll need to use the beans’ identifiers.

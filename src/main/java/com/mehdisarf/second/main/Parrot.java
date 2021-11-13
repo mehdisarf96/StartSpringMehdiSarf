@@ -1,9 +1,8 @@
-package com.mehdisarf.main;
+package com.mehdisarf.second.main;
 
 public class Parrot {
 
     private String name;
-
 
     public String getName() {
         return name;

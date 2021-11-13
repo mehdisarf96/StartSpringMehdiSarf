@@ -1,6 +1,6 @@
-package com.mehdisarf.config;
+package com.mehdisarf.first.config;
 
-import com.mehdisarf.main.Parrot;
+import com.mehdisarf.first.main.Parrot;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
