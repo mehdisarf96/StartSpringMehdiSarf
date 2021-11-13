@@ -1,4 +1,4 @@
-package com.mehdisarf;
+package com.mehdisarf.main;
 
 public class Parrot {
 
