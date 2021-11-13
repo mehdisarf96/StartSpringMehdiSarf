@@ -12,5 +12,13 @@ public class Main {
         Parrot p = context.getBean(Parrot.class);
 
         System.out.println(p.getName());
+
+        // refer to these two new beans.
+        String myString = context.getBean(String.class);
+        System.out.println(myString);
+
+        Integer number = context.getBean(Integer.class);
+        System.out.println(number);
+
     }
 }

@@ -6,3 +6,6 @@ and make Spring use my config class.)
 
 --
 Referring to the Parrot instance from the context
+---
+you can add any kind of object to the Spring context.
+add a bean of type String and a bean of type Integer.

@@ -15,4 +15,14 @@ public class ProjectConfig {
 
         return p;
     }
+
+    @Bean
+    String greetingText(){
+        return "Hello";
+    }
+
+    @Bean
+    Integer age(){
+        return 90;
+    }
 }
