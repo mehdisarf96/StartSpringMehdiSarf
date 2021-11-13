@@ -1,0 +1,16 @@
+Programmatically adding beans to the Spring context
+
+it enables you to add new instances in the context directly by
+calling a method of the context instance.
+
+Using the registerBean() method to add specific object instances to the Spring context.
+
+you just need to call the registerBean() method of the ApplicationContext instance.
+
+
+this project’s configuration class is empty, and the Parrot class we use
+for our bean definition example is just a plain old Java object (POJO);
+we use no annotation with it.
+
+In the main method of the project, I’ve used the registerBean() method to add an
+instance of type Parrot to the Spring context
