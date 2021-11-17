@@ -13,13 +13,12 @@ public class Main {
         Person thePerson = context.getBean(Person.class);
 
         System.out.println(theParrot.getName());
-
         System.out.println(thePerson.getName());
 
 
-        // the two instances aren’t yet linked to one another.
-        // there’s not yet a relationship between the instances.
-        // the two beans are in the context, but no link has been established between them.
+        // the two instances are linked to one another.
+        // now there’s a relationship between the instances.
+        // the two beans are in the context, and a link has been established between them.
         System.out.println(thePerson.getParrot());
     }
 }
