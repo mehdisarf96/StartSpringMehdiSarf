@@ -8,9 +8,17 @@ public class Person {
 
     private String name = "Meyti";
 
-    // instruct Spring to inject an appropriate value from its context
-    @Autowired
     private Parrot parrot;
+
+    // in constructor ro faqat neveshtam inja ke neshun bedam ejra nemishe.
+    public Person() {
+        System.out.println("no Args Constructor");
+    }
+
+    @Autowired
+    public Person(Parrot parrot) {
+        this.parrot = parrot;
+    }
 
     public String getName() {
         return name;
