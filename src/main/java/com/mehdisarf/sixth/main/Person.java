@@ -10,16 +10,6 @@ public class Person {
 
     private Parrot parrot;
 
-    // in constructor ro faqat neveshtam inja ke neshun bedam ejra nemishe.
-    public Person() {
-        System.out.println("no Args Constructor");
-    }
-
-    @Autowired
-    public Person(Parrot parrot) {
-        this.parrot = parrot;
-    }
-
     public String getName() {
         return name;
     }
@@ -32,6 +22,7 @@ public class Person {
         return parrot;
     }
 
+    @Autowired
     public void setParrot(Parrot parrot) {
         this.parrot = parrot;
     }
