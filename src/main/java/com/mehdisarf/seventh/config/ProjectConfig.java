@@ -5,11 +5,13 @@ import com.mehdisarf.seventh.main.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ProjectConfig {
 
     @Bean
+    @Primary
     public Parrot parrot1() {
 
         Parrot p = new Parrot();
@@ -25,16 +27,12 @@ public class ProjectConfig {
         return p;
     }
 
-    /*
-    The identifier of the parameter MATCHES the name of one of the beans from the context.
-    In this case, Spring will choose the bean for which the name is the same as the parameter.
-     */
     @Bean
-    public Person person(Parrot parrot2) {
+    public Person person(Parrot par) {
 
         Person p = new Person();
         p.setName("Mehdi");
-        p.setParrot(parrot2);
+        p.setParrot(par);
 
         return p;
     }
