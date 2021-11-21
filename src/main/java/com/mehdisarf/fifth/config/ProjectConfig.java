@@ -16,14 +16,15 @@ public class ProjectConfig {
     }
 
     @Bean
-    public Person person() {
+    // Injecting bean dependencies by using parameters of the methods.
+    // Spring sets a particular value into the parameter of the person() method
+    // when calling it and resolves a dependency of this method.
+    public Person person(Parrot parrot) {
         Person p = new Person();
         p.setName("mehdi");
 
         // establish the relationship between the two instances.
-        // Making a link between the beans with a direct method call
-        // Setting the reference of the parrot bean to the person’s parrot attribute
-        p.setParrot(parrot());
+        p.setParrot(parrot);
 
         return p;
     }
