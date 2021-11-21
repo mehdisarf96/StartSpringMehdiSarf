@@ -2,6 +2,7 @@ package com.mehdisarf.seventh.config;
 
 import com.mehdisarf.seventh.main.Parrot;
 import com.mehdisarf.seventh.main.Person;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +12,6 @@ import org.springframework.context.annotation.Primary;
 public class ProjectConfig {
 
     @Bean
-    @Primary
     public Parrot parrot1() {
 
         Parrot p = new Parrot();
@@ -28,7 +28,7 @@ public class ProjectConfig {
     }
 
     @Bean
-    public Person person(Parrot par) {
+    public Person person(@Qualifier("parrot2") Parrot par) {
 
         Person p = new Person();
         p.setName("Mehdi");
