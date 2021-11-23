@@ -11,11 +11,15 @@ public class CommentService {
     private final CommentNotificationProxy commentNotificationProxy;
 
     public CommentService(CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
+
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
     }
 
+    // We implement the use case that delegates the “store comment”
+    // and “send notification” responsibilities to the dependencies.
     public void publishComment(Comment comment) {
+
         commentRepository.storeComment(comment);
         commentNotificationProxy.sendComment(comment);
     }
