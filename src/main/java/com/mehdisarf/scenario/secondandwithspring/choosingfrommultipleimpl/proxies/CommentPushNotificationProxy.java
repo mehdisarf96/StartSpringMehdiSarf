@@ -1,9 +1,11 @@
 package com.mehdisarf.scenario.secondandwithspring.choosingfrommultipleimpl.proxies;
 
 import com.mehdisarf.scenario.secondandwithspring.choosingfrommultipleimpl.model.Comment;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 public class CommentPushNotificationProxy implements CommentNotificationProxy {
 
     @Override

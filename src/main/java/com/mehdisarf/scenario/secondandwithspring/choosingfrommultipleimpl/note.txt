@@ -6,3 +6,7 @@ NoUniqueBeanDefinitionException:
 No qualifying bean of type 'com.mehdisarf.scenario...proxies.CommentNotificationProxy' available:
 expected single matching bean but found 2:
 commentPushNotificationProxy, emailCommentNotificationProxy.
+
+-------------
+
+Spring injected the new implementation because we marked it as primary.
