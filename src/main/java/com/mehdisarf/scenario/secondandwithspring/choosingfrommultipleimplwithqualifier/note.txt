@@ -1,0 +1,7 @@
+we can use to name them @Qualifier and tell Spring where and what it needs to inject.
+
+When you want Spring to inject one of these, you just need to specify the implementation’s
+name using the @Qualifier annotation again.
+
+Specifying the implementation Spring needs to inject with @Qualifier.
+
