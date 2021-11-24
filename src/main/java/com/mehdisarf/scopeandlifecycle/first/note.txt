@@ -1,0 +1,3 @@
+
+Because the two variables hold the same reference,
+the result of this operation is true.
