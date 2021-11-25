@@ -1,3 +1,8 @@
 You’ll observe the output no longer appears in the console when
 running the app because we instructed Spring to create the bean only when someone uses
 it. And, in our example, nobody uses the CommentService bean.
+
+------------------------------------------
+------------------------------------------
+
+Change the Main class and add a reference to the CommentService bean.
