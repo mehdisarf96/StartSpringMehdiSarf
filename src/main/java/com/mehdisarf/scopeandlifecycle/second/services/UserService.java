@@ -7,14 +7,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
+    // Making the field final highlights that this field was intended not to be changed. (immutable)
+    private final CommentRepository commentRepository;
+
+    // replace the field injection with constructor injection.
     @Autowired
-    private CommentRepository commentRepository;
+    public UserService(CommentRepository commentRepository) {
+        this.commentRepository = commentRepository;
+    }
 
     public CommentRepository getCommentRepository() {
         return commentRepository;
-    }
-
-    public void setCommentRepository(CommentRepository commentRepository) {
-        this.commentRepository = commentRepository;
     }
 }
