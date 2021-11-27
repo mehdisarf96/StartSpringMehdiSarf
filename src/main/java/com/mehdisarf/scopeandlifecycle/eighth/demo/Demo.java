@@ -1,15 +1,15 @@
-package com.mehdisarf.scopeandlifecycle.seventh.demo;
+package com.mehdisarf.scopeandlifecycle.eighth.demo;
 
+import com.mehdisarf.scopeandlifecycle.eighth.config.ProjectConfig;
 import com.mehdisarf.scopeandlifecycle.eighth.model.Comment;
 import com.mehdisarf.scopeandlifecycle.eighth.services.CommentService;
-import com.mehdisarf.scopeandlifecycle.seventh.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Demo {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+        AnnotationConfigApplicationContext c = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        CommentService commentService = context.getBean(CommentService.class);
+        CommentService commentService = c.getBean(CommentService.class);
 
         commentService.sendComment(new Comment());
         commentService.sendComment(new Comment());

@@ -1,0 +1,18 @@
+Don’t make the mistake of injecting the
+CommentProcessor
+directly in the
+CommentService
+bean.
+
+The CommentService bean is a singleton,
+which means that Spring creates only an instance of this class
+چون با stereotype annotation ساختیم bean رو.
+
+As a consequence, Spring will also inject the
+dependencies of this class just once when it creates the CommentService bean itself. In
+this case, you’ll end up with only an instance of the CommentProcessor. Each call of the
+sendComment() method will use this unique instance, so with multiple threads you’ll run
+into the same race condition issues as with a singleton bean.
+
+be tore koli: Injecting a prototype into a singleton.
+(ke race ijad mikone.(age singleton esh ba stereotype dorost shode bashe.))

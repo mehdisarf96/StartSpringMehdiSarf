@@ -3,6 +3,7 @@ package com.mehdisarf.scopeandlifecycle.seventh.services;
 import com.mehdisarf.scopeandlifecycle.seventh.processors.CommentProcessor;
 import com.mehdisarf.scopeandlifecycle.seventh.model.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class CommentService {
 
     @Autowired
-    private AnnotationConfigApplicationContext context;
+    private ApplicationContext context;
 
     public void sendComment(Comment comment) {
 
