@@ -1,0 +1,16 @@
+CommentProcessor: A mutable object; a potential candidate to the prototype scope.
+
+service using a mutable object to implement a use case.
+
+----------
+
+You need CommentProcessor instance for every call of the sendComment() method,
+so the request to the bean should be inside the method itself.
+
+you can directly inject the Spring context (ApplicationContext) into the CommentService bean
+using @Autowired.
+
+In the sendComment() method, you retrieve the CommentProcessor instance using getBean()
+from the application context.
+
+be tore koli bud:'USING' Using as prototype bean (CommentProcessor) into a singleton.
