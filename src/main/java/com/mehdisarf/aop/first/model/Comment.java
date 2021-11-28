@@ -3,6 +3,12 @@ package com.mehdisarf.aop.first.model;
 public class Comment {
 
     private String author;
+
+    @Override
+    public String toString() {
+        return "Comment{" + "author='" + author + '\'' + ", text='" + text + '\'' + '}';
+    }
+
     private String text;
 
     public String getAuthor() {

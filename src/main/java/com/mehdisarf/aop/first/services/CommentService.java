@@ -10,7 +10,9 @@ public class CommentService {
 
     private Logger logger = Logger.getLogger(CommentService.class.getName());
 
-    public void publishComment(Comment comment) {
+    public String publishComment(Comment comment) {
+
         logger.info("Publishing Comment: " + comment.getText());
+        return "SUCCESS"; // For our demonstration, the method now returns a value.
     }
 }

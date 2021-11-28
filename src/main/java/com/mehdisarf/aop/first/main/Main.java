@@ -5,7 +5,11 @@ import com.mehdisarf.aop.first.model.Comment;
 import com.mehdisarf.aop.first.services.CommentService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.logging.Logger;
+
 public class Main {
+    private static Logger logger = Logger.getLogger(Main.class.getName());
+
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext context =
@@ -17,6 +21,8 @@ public class Main {
         comment.setAuthor("Mehdi");
         comment.setText("Hello AOP World!");
 
-        commentService.publishComment(comment);
+        String value = commentService.publishComment(comment);
+
+        logger.info(value);
     }
 }
